@@ -713,6 +713,7 @@ securityDefinitions:
       tpp_client_credentials: Access TPP services
     tokenUrl: https://example.com/token
     type: oauth2
+    x-ibm-oauth-provider: your-oauth-provider
   UserOAuthSecurity:
     authorizationUrl: https://example.com/authorize
     flow: accessCode
@@ -720,6 +721,7 @@ securityDefinitions:
       payment: Access payment services
     tokenUrl: https://example.com/token
     type: oauth2
+    x-ibm-oauth-provider: your-oauth-provider
 swagger: '2.0'
 tags: []
 x-ibm-configuration:
