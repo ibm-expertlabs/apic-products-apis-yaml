@@ -13,6 +13,7 @@ consumes:
 security:
   - AppID: []
     AppSecret: []
+    TPPOAuthSecurity: []
 securityDefinitions:
   AppSecret:
     type: apiKey
@@ -24,6 +25,12 @@ securityDefinitions:
     name: X-Client-Id
     in: header
     x-key-type: client_id
+  TPPOAuthSecurity:
+    type: oauth2
+    flow: application
+    tokenUrl: https://example.com/token
+    scopes:
+      tpp_client_credentials: Access TPP services
 x-ibm-configuration:
   enforced: true
   testable: true
