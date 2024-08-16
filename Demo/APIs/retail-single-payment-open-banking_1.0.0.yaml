@@ -711,12 +711,16 @@ securityDefinitions:
     x-key-type: client_secret
   TPPOAuthSecurity:
     flow: application
+    scopes:
+      tpp_client_credentials: TPP Client Credentials
     tokenUrl: https://your-oauth-provider/token
     type: oauth2
     x-ibm-oauth-provider: your-oauth-provider
   UserOAuthSecurity:
     authorizationUrl: https://your-oauth-provider/authorize
     flow: accessCode
+    scopes:
+      payment: Payment Scope
     tokenUrl: https://your-oauth-provider/token
     type: oauth2
     x-ibm-oauth-provider: your-oauth-provider
